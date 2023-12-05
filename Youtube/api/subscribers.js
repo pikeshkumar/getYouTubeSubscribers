@@ -3,7 +3,8 @@ const router = express.Router();
 const { MongoClient } = require("mongodb");
 
 // Connection URI
-const uri = "mongodb://0.0.0.0:27017/";
+const uri =
+  "mongodb+srv://Kumarpikesh52:Pikesh123@cluster0.wdnhuwd.mongodb.net/";
 
 // Database Name
 const dbName = "Youtube"; // Replace with your database name
@@ -118,9 +119,15 @@ router.get("/subscribers", (req, res, next) => {
 });
 router.get("/subscribers/:id", (req, res, next) => {
   fetchbyId(req.params.id).then((result) => {
-    res.status(200).json({
-      Susbscribers: result,
-    });
+    if (result != null) {
+      res.status(200).json({
+        Susbscribers: result,
+      });
+    } else {
+      res.status(404).json({
+        Message: "User Not Found",
+      });
+    }
   });
 });
 
