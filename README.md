@@ -17,7 +17,7 @@ This endpoint returns name and subscribed channel list
 
 /api/subscriber/:id
 
-This endpoint gets all details given a particular id
+This endpoint gets all details given a particular id, if id is not found it returns Status as 404 and Message: Id not found
 
 Clone the Repository:
 
