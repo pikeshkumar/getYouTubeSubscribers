@@ -1,7 +1,7 @@
 # getYouTubeSubscribers
 
 Overview
-Welcome to the getyoutubeSubscribers api System! This api is conencted to mongodb having subscribers details
+Welcome to the getyoutubeSubscribers api, This api is conencted to mongodb having subscribers details
 
 Features
 
